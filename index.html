@@ -9,33 +9,24 @@
 </head>
 
 <body>
-    <div id="map"></div>
-    <script>
-        function initMap() {
-            // The location of Uluru
-            var dubossary = {
-                lat: 47.274471,
-                lng: 29.147922
-            };
-            // The map, centered at Uluru
-            var map = new google.maps.Map(
-                document.getElementById('map'), {
-                    zoom: 15,
-                    center: dubossary
-                });
-            // The marker, positioned at Uluru
-            var marker = new google.maps.Marker({
-                position: uluru,
-                map: map
-            });
-        }
-    </script>
+    <div class='locator'>Store Locator</div>
+    <div class="search-container">
+        <div class="search">
+            <input type="text" id='zip-code-input' placeholder="Enter zip">
+        </div>
+    </div>
 
-    <script src="app.js"></script>
-    <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBh15L6ZQVrZVsMjwAhb_3-X6bbgpSGtQk&callback=initMap"
-        type="text/javascript">
-    </script>
+
+
+    <div id="map">
+
+
+
+        <script src="./js/app.js"></script>
+        <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBh15L6ZQVrZVsMjwAhb_3-X6bbgpSGtQk&callback=initMap"
+            type="text/javascript">
+        </script>
 </body>
 
 </html>

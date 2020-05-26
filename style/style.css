@@ -7,10 +7,56 @@
 body {
     width: 100vw;
     height: 100vh;
+    position: relative;
 
 }
 
 #map {
     height: 100%;
     width: 100%;
+}
+
+.locator {
+    position: absolute;
+    z-index: 100;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    text-transform: uppercase;
+    top: 100px;
+    left: 180px;
+}
+
+.search-container {
+    position: absolute;
+    z-index: 200;
+    width: 400px;
+    height: 60px;
+    background-color: #454545;
+    border-radius: 30px;
+    top: 160px;
+    left: 180px;
+    display: flex;
+}
+
+.search {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+}
+
+
+.search-container input {
+    width: 100%;
+    font-size: 25px;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+}
+
+.search-container input:focus {
+    outline: none;
 }
