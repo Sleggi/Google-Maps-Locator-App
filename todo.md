@@ -10,6 +10,6 @@
 
 - Add input box 
 
-- Add tore List Container
+- Add store List Container
 
 - Add individual store container
