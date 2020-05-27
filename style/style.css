@@ -69,17 +69,30 @@ i {
 }
 
 
+
+
 .stores-list-container {
     width: 350px;
     bottom: 20px;
     background-color: #fff;
     position: absolute;
     z-index: 333;
-    border-radius: 30px;
+    border-radius: 10px;
     top: 225px;
     left: 100px;
+    overflow-y: auto;
+
 }
 
+.stores-list-container::-webkit-scrollbar {
+    width: 12px;
+}
+
+.stores-list-container::-webkit-scrollbar-thumb {
+    background-color: #454545;
+    border-radius: 6px;
+    height: 50px;
+}
 
 
 .store-container {

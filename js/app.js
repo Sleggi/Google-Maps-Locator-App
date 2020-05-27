@@ -141,3 +141,28 @@
 
             });
         }
+
+        window.onload = () => { // on window.onload = function () { }
+            displayStores();
+        }
+
+        function displayStores() { // stores it's a list with objects
+            let storesHtml = '';
+            for (let store of stores) {
+                storesHtml += `
+                <div class="store-container">
+                <div class="left-side">
+                    <div class="store-addres">
+                        8480 Beverly Blvd
+                        Los Angeles, CA 90048
+                    </div>
+                    <div class="store-phone-number">
+                        356-259-4789
+                    </div>
+                </div>
+                <div class='number'>1</div>
+            </div>
+            `
+                document.querySelector('.stores-list').innerHTML = storesHtml;
+            }
+        }
