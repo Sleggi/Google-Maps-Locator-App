@@ -204,7 +204,7 @@ function createMarker(latlng, name, address, openStatusText, phoneNumber, index)
          ${openStatusText}
          </div>
          <div class='store-address-info'>
-           ${address} 
+           <a href='https://www.google.com/maps/dir/?api=1&origin=United+States&destination=${address}' target="_blank">${address}</a>
           </div>
          <div class='store-phone-number'>
            ${phoneNumber}

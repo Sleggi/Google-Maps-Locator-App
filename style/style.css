@@ -51,7 +51,7 @@ body {
     font-size: 15px;
     background-color: transparent;
     border: none;
-    color: #fff;
+    color: #FF7D97;
     padding-left: 1rem;
     padding-right: 1rem;
 
@@ -68,7 +68,13 @@ i {
     color: #fff;
 }
 
+#zip-code-input {
+    color: #FF7D97;
+}
 
+#zip-code-input label {
+    color: #FF7D97;
+}
 
 
 .stores-list-container {
@@ -82,7 +88,7 @@ i {
     left: 100px;
     overflow-y: hidden;
     display: flex;
-    padding-bottom: 30px;
+    padding-bottom: 20px;
     padding-top: 20px;
 }
 
@@ -99,7 +105,7 @@ i {
 }
 
 .stores-list::-webkit-scrollbar-thumb {
-    background-color: #454545;
+    background-color: #FF7D97;
     border-radius: 30px;
     height: 50px;
 }
@@ -109,7 +115,7 @@ i {
     display: flex;
     padding-top: 20px;
     width: 310px;
-    border-bottom: 1px solid #a19f9f;
+    border-bottom: 1px solid #FF7D97;
 }
 
 
@@ -160,7 +166,7 @@ i {
     padding-bottom: 10px;
     font-size: 13px;
 
-    border-bottom: 1px solid #454545;
+    border-bottom: 1px solid #FF7D97;
 
 }
 
@@ -171,7 +177,15 @@ i {
     width: 180px;
     display: flex;
     flex-direction: row;
+    text-decoration: none;
+    cursor: pointer;
 
+}
+
+.store-address-info a {
+    text-decoration: none;
+    color: black;
+    font-weight: 400;
 }
 
 .store-phone-number {
@@ -187,7 +201,7 @@ i {
     height: 50px;
     align-self: center;
     padding-bottom: 10px;
-    border-bottom: 1px solid #454545;
+    border-bottom: 1px solid #FF7D97;
 }
 
 .image img {
