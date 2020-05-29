@@ -85,7 +85,7 @@ function initMap() {
                     featureType: 'road.highway',
                     elementType: 'geometry',
                     stylers: [{
-                        color: '#746855'
+                        color: '#FF7D97'
                     }]
                 },
                 {
@@ -201,6 +201,7 @@ function displayStores(stores) { // stores it's a list with objects
 
         storesHtml += `
                 <div class="store-container">
+                <div class='store-container-background'>
                 <div class="left-side">
                     <div class="store-addres">
                        ${address}
@@ -210,6 +211,7 @@ function displayStores(stores) { // stores it's a list with objects
                     </div>
                 </div>
                 <div class='number'>${index+1}</div>
+                </div>
             </div>
             ` //the actual looping starting from 0 but +1 used just for display 
         document.querySelector('.stores-list').innerHTML = storesHtml;
