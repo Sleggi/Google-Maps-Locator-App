@@ -139,15 +139,60 @@ function initMap() {
                 }
             ]
         });
-    infoWindow = new google.maps.InfoWindow()
-    showStoresMarkers();
+    infoWindow = new google.maps.InfoWindow();
+
+    searchStores();
+
 }
 
-window.onload = () => { // on window.onload = function () { }
-    displayStores();
+// window.onload = () => { // on window.onload = function () { }
+//     displayStores();
+//     setOnClickListener();
+// }
+
+
+function searchStores() {
+
+    let foundStores = [];
+    let zipCode = document.getElementById('zip-code-input').value; // here is user input
+    if (zipCode) {
+        stores.forEach((store) => {
+            let postal = store.address.postalCode.substring(0, 5); // here is store-data objects
+            if (postal == zipCode) {
+                foundStores.push(store);
+
+            }
+        });
+    } else {
+        foundStores = stores;
+    };
+    clearLocations()
+    displayStores(foundStores);
+    showStoresMarkers(foundStores);
+    setOnClickListener();
+
+};
+
+
+function clearLocations() {
+    infoWindow.close();
+    for (var i = 0; i < markers.length; i++) {
+        markers[i].setMap(null);
+    }
+    markers.length = 0;
+};
+
+function setOnClickListener() {
+    let storeElements = document.querySelectorAll('.store-container');
+    storeElements.forEach(function (element, index) {
+        element.addEventListener('click', () => {
+            google.maps.event.trigger(markers[index], 'click');
+        })
+    })
 }
 
-function displayStores() { // stores it's a list with objects
+
+function displayStores(stores) { // stores it's a list with objects
     let storesHtml = '';
     for (let [index, store] of stores.entries()) { // we getting index by looping throught every single store entries. 
         //The Object.entries() method returns an array of a given object's own enumerable string-keyed property [key, value] pairs,
@@ -172,7 +217,7 @@ function displayStores() { // stores it's a list with objects
 }
 
 
-function showStoresMarkers() {
+function showStoresMarkers(stores) {
     var bounds = new google.maps.LatLngBounds();
     stores.forEach(function (store, index) {
         let latlng = new google.maps.LatLng(
